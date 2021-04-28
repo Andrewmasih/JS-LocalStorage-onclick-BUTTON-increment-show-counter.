@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Web Storage - Local Storage - 'onclick'BUTTON counter message box</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <h1> Click me! </h1>
+    <button onclick = "incrementCounter ()"> Click </button>
+    <button onclick = "showCounter ()"> ShowMe </button>
+
+    <script>
+      function incrementCounter () {
+        // set current counter varible to the contents of "counter" or 0 if "counter" doesnt exist yet
+        let currentCounter = sessionStorage.getItem
+        ("counter") || 0;
+        // increment currentCounter and store it in sessionStorage with the name "counter"
+
+        sessionStorage.setItem ("counter", ++ currentCounter);
+      };
+
+      function showCounter () {
+       // set currentCounter varible to the contents of "counter" or 0 if "counter" doesnt exist yet 
+        let currentCounter = sessionStorage.getItem
+        ("counter") || 0;
+        // display the current count in an alert
+        alert ("you clicked the button:" + "times");
+      }
+
+      // 'Local' and 'session' storage are both very useful, especially when we dont have access to a database backend to store data.
+
+      // they are also useful as a workaround if we need to store data, some data, but dont want to create global variables
+
+    </script>
+  </body>
+</html>
